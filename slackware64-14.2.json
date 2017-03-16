@@ -3,13 +3,12 @@
   "builders": [{
     "type": "virtualbox-iso",
     "guest_os_type": "Linux26_64",
-    "iso_url": "file:///home/alex/Downloads/slackware64-14.2-install-dvd.iso",
+    "iso_url": "http://mirrors.slackware.com/slackware/slackware-iso/slackware64-14.2-iso/slackware64-14.2-install-dvd.iso",
     "iso_checksum": "522db1d2845aaab22078530c67f858c1",
     "iso_checksum_type": "md5",
     "ssh_username": "root",
     "ssh_password": "vagrant",
     "shutdown_command": "shutdown -h now",
-    "guest_additions_mode": "disable",
     "hard_drive_interface": "sata",
     "export_opts": [
       "--manifest",
@@ -61,6 +60,10 @@
       "echo PermitRootLogin yes >> /etc/ssh/sshd_config<enter>",
       "/etc/rc.d/rc.sshd restart<enter>"
     ]
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "script": "vagrantize.sh"
   }],
   "post-processors": ["vagrant"]
 }
