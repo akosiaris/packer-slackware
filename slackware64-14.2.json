@@ -52,8 +52,14 @@
       "<wait>vagrant<enter>",
       "<wait>vagrant<enter>",
       "<wait><enter><enter>",
-      "<wait>e<enter><enter>",
-      "y"
+      "<wait>e<wait><enter><wait><enter>",
+      "<wait>reboot<enter>",
+      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+      "<wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10><wait10>",
+      "root<enter>",
+      "<wait>vagrant<enter>",
+      "echo PermitRootLogin yes >> /etc/ssh/sshd_config<enter>",
+      "/etc/rc.d/rc.sshd restart<enter>"
     ]
   }],
   "post-processors": ["vagrant"]
