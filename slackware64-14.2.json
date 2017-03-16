@@ -11,6 +11,12 @@
     "shutdown_command": "shutdown -h now",
     "guest_additions_mode": "disable",
     "hard_drive_interface": "sata",
+    "export_opts": [
+      "--manifest",
+      "--vsys", "0",
+      "--description", "Slackware 14.2 64-bit minimum installation",
+      "--version", "0.1.0"
+    ],
     "boot_command": [
       "<wait><enter><wait5>",
       "<wait><enter>",
