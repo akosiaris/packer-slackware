@@ -8,7 +8,7 @@
     "iso_checksum_type": "md5",
     "ssh_username": "root",
     "ssh_password": "vagrant",
-    "shutdown_command": "echo 'packer' | sudo -S shutdown -P now",
+    "shutdown_command": "shutdown -h now",
     "guest_additions_mode": "disable",
     "hard_drive_interface": "sata",
     "boot_command": [
